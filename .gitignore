@@ -1,20 +1,70 @@
-*.class
-
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-.idea
+# Gradle
+.gradle/
+build/
+out/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle Wrapper
+!gradle-wrapper.properties
+
+# Локальные настройки Gradle
+**/gradle.properties
+
+# Файлы зависимостей
+*.class
+**/*.iml
+**/*.log
+**/.classpath
+**/.project
+**/.settings/
+
+# Кэш и временные файты
+**/*~
+**/temp/
+
+# Идея (IntelliJ)
+.idea/
+*.iws
+*.ipr
 *.iml
 
-target
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
-out
-*.log
+# Eclipse
+.settings/
+.classpath
+.project
+bin/
+
+# macOS
+.DS_Store
+
+# Тесты и отчеты
+**/test-results/
+**/reports/
+**/build/test-results/
+**/build/reports/
+
+# Плагины и кэш
+**/buildSrc/.gradle/
+**/buildSrc/build/
+
+# Деплой/артефакты
+*.war
+*.ear
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Исключения для обновлений Gradle Wrapper
+!gradle/wrapper/gradle-wrapper.jar
