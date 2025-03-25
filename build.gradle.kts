@@ -40,3 +40,15 @@ tasks.withType<JavaCompile>() {
 tasks.withType<Javadoc>() {
     options.encoding = "UTF-8"
 }
+
+//задача для архивации JavaDoc.
+tasks.register<Zip>("zipJavaDoc") {
+    group = "documentation"
+    description = "Packs the generated Javadoc into a zip archive"
+
+    dependsOn("javadoc")
+
+    from("build/docs/javadoc")
+    archiveFileName.set("javadoc.zip")
+    destinationDirectory.set(layout.buildDirectory.dir("archives"))
+}
